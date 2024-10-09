@@ -14,6 +14,7 @@
 		0DDC462D2CB71796001F54E9 /* TaparaSoundBoard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0DDC462B2CB71796001F54E9 /* TaparaSoundBoard.xcdatamodeld */; };
 		0DDC462F2CB717A1001F54E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DDC462E2CB717A1001F54E9 /* Assets.xcassets */; };
 		0DDC46322CB717A1001F54E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DDC46302CB717A1001F54E9 /* LaunchScreen.storyboard */; };
+		0DDC463A2CB71EE8001F54E9 /* SoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDC46392CB71EE8001F54E9 /* SoundViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		0DDC462E2CB717A1001F54E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DDC46312CB717A1001F54E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DDC46332CB717A1001F54E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DDC46392CB71EE8001F54E9 /* SoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				0DDC46242CB71796001F54E9 /* SceneDelegate.swift */,
 				0DDC46262CB71796001F54E9 /* ViewController.swift */,
 				0DDC46282CB71796001F54E9 /* Main.storyboard */,
+				0DDC46392CB71EE8001F54E9 /* SoundViewController.swift */,
 				0DDC462E2CB717A1001F54E9 /* Assets.xcassets */,
 				0DDC46302CB717A1001F54E9 /* LaunchScreen.storyboard */,
 				0DDC46332CB717A1001F54E9 /* Info.plist */,
@@ -145,6 +148,7 @@
 				0DDC46232CB71796001F54E9 /* AppDelegate.swift in Sources */,
 				0DDC46252CB71796001F54E9 /* SceneDelegate.swift in Sources */,
 				0DDC462D2CB71796001F54E9 /* TaparaSoundBoard.xcdatamodeld in Sources */,
+				0DDC463A2CB71EE8001F54E9 /* SoundViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
