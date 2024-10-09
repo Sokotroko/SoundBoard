@@ -15,12 +15,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewWillAppear(_ animated: Bool) {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        do{
-            grabaciones = try
-            context.fetch(Grabacion.fetchRequest())
+        do {
+            grabaciones = try context.fetch(Grabacion.fetchRequest())
+            
+            // Imprimir las duraciones de las grabaciones recuperadas
+            for grabacion in grabaciones {
+                print("Duración recuperada:", grabacion.duracion)
+            }
+            
             tablaGrabaciones.reloadData()
-        }catch{}
+        } catch {
+            print("Error al recuperar grabaciones")
+        }
     }
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return grabaciones.count
@@ -29,7 +37,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         let grabacion = grabaciones[indexPath.row]
-        cell.textLabel?.text = grabacion.nombre
+        
+        // Verifica si 'duracion' está recuperando un valor correcto
+        print("Duración en la celda:", grabacion.duracion)
+        
+        // Formatear la duración en minutos y segundos
+        let minutos = Int(grabacion.duracion) / 60
+        let segundos = Int(grabacion.duracion) % 60
+        let duracionTexto = String(format: "%02d:%02d", minutos, segundos)
+        
+        // Mostrar el nombre de la grabación y su duración
+        cell.textLabel?.text = "\(grabacion.nombre ?? "Sin Nombre") - \(duracionTexto)"
+        
         return cell
     }
     

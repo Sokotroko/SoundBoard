@@ -92,17 +92,41 @@
                                     <action selector="agregarTapped:" destination="SlW-AZ-q1e" eventType="touchUpInside" id="ac4-1f-s7J"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Bc-W3-a4j">
+                                <rect key="frame" x="284" y="128" width="70" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="6Ys-2v-VRa"/>
+                                    <constraint firstAttribute="width" constant="70" id="pz8-jk-atu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Wlv-3Z-hmE">
+                                <rect key="frame" x="140" y="490" width="134" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="53p-02-Vtw"/>
+                                    <constraint firstAttribute="width" constant="130" id="JJx-uT-M77"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="volumenChanged:" destination="SlW-AZ-q1e" eventType="valueChanged" id="g9j-In-iIQ"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xW1-uU-QAL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="yO9-KN-kEU" firstAttribute="centerX" secondItem="cik-tc-rYS" secondAttribute="centerX" id="8JX-mF-kGR"/>
                             <constraint firstItem="xW1-uU-QAL" firstAttribute="trailing" secondItem="tpI-ld-RsN" secondAttribute="trailing" constant="20" id="J90-RI-qrU"/>
+                            <constraint firstItem="Wlv-3Z-hmE" firstAttribute="centerX" secondItem="cik-tc-rYS" secondAttribute="centerX" id="JBg-Mp-QgB"/>
                             <constraint firstItem="yO9-KN-kEU" firstAttribute="top" secondItem="tpI-ld-RsN" secondAttribute="bottom" constant="20" id="KF3-dd-63R"/>
                             <constraint firstItem="v1f-5y-o5x" firstAttribute="centerX" secondItem="cik-tc-rYS" secondAttribute="centerX" id="VSX-mz-gax"/>
                             <constraint firstItem="yO9-KN-kEU" firstAttribute="leading" secondItem="xW1-uU-QAL" secondAttribute="leading" constant="20" id="Xbb-0P-ZVR"/>
+                            <constraint firstItem="0Bc-W3-a4j" firstAttribute="leading" secondItem="cZo-Cc-DbD" secondAttribute="trailing" constant="10" id="aFf-ze-vl2"/>
                             <constraint firstItem="tpI-ld-RsN" firstAttribute="top" secondItem="v1f-5y-o5x" secondAttribute="bottom" constant="30" id="dCE-XX-OZb"/>
+                            <constraint firstItem="0Bc-W3-a4j" firstAttribute="top" secondItem="xW1-uU-QAL" secondAttribute="top" constant="40" id="e59-Ul-YoE"/>
                             <constraint firstItem="1Al-L5-rIQ" firstAttribute="centerX" secondItem="cik-tc-rYS" secondAttribute="centerX" id="eYS-ss-BVs"/>
+                            <constraint firstItem="Wlv-3Z-hmE" firstAttribute="top" secondItem="1Al-L5-rIQ" secondAttribute="bottom" constant="85.5" id="hOW-tT-hkg"/>
                             <constraint firstItem="cZo-Cc-DbD" firstAttribute="centerX" secondItem="cik-tc-rYS" secondAttribute="centerX" id="lh3-86-hLN"/>
                             <constraint firstItem="xW1-uU-QAL" firstAttribute="trailing" secondItem="yO9-KN-kEU" secondAttribute="trailing" constant="20" id="sY1-X6-tdu"/>
                             <constraint firstItem="tpI-ld-RsN" firstAttribute="centerX" secondItem="cik-tc-rYS" secondAttribute="centerX" id="tCS-WU-9dx"/>
@@ -118,6 +142,8 @@
                         <outlet property="grabarButton" destination="cZo-Cc-DbD" id="QIn-hl-ZLM"/>
                         <outlet property="nombreTextField" destination="yO9-KN-kEU" id="GdB-wX-QBH"/>
                         <outlet property="reproducirButton" destination="v1f-5y-o5x" id="0jf-FL-WaV"/>
+                        <outlet property="tiempoGrabacionLabel" destination="0Bc-W3-a4j" id="uhM-9W-i9A"/>
+                        <outlet property="volumenSlider" destination="Wlv-3Z-hmE" id="LOJ-29-B5f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jCT-H8-wGd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
